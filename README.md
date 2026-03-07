@@ -96,10 +96,12 @@ Browser (Chrome / Safari / Firefox)
 
 Clone the Repository
 Bash
-git clone https://github.com/yourusername/wadaindex.git
-cd wadaindex
+
+git clone https://github.com/byllzz/wada-index.git
+cd wada-index
 Setup
 Bash
+
 # Install dependencies
 npm install
 
