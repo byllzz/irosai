@@ -1,11 +1,18 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 export default function PlateCard({ plate }) {
+
+  const navigate= useNavigate();
+
+  const handleNavigate = () => {
+    navigate('/plateDetails' , {state: {plate : plate}} )
+  }
   return (
     <div className="group relative bg-[#0f0f0f] border border-zinc-900 p-4 rounded-sm hover:border-zinc-700 transition-all duration-500">
 
       {/* 1. The Color "Chord" Display */}
-      <div className="flex h-64 w-full overflow-hidden rounded-sm cursor-pointer shadow-2xl">
+      <div className="flex h-64 w-full overflow-hidden rounded-sm cursor-pointer shadow-2xl" onClick={handleNavigate}>
         {plate.colors.map((color, index) => (
           <div
             key={index}

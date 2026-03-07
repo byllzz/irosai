@@ -13,7 +13,7 @@ export default function SingleColorCard({ item }) {
 
    const navigation = useNavigate();
   const handleDetails = () => {
-   navigation('/colorDetails')
+   navigation('/ColorDetails', { state: { color: item } });
   }
   return (
     <div className="group relative bg-[#0a0a0a] border border-zinc-900 rounded-sm overflow-hidden hover:border-zinc-700 transition-all duration-500">
