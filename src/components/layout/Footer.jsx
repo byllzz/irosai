@@ -7,8 +7,8 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-black text-zinc-500 py-16 px-6 border-t border-zinc-900 min-h-screen w-full flex flex-col justify-between">
-      {/* 1. Large Outlined Background Text */}
+    <footer className="bg-black text-zinc-500 pt-10 pb-0 px-8 border-t border-zinc-900 min-h-screen w-full flex flex-col justify-between">
+      {/* Large  Text */}
       <div className=" w-full select-none pointer-events-none">
         <h1
           className="text-[16.5vw] font-bold leading-none opacity-100 uppercase tracking-tighter"
@@ -20,8 +20,8 @@ export default function Footer() {
           WadaIndex
         </h1>
       </div>
-      <div className="w-full max-w-[1560px] mx-auto grid grid-cols-2 md:grid-cols-2 gap-12">
-        {/* Column 1: Brand & Philosophy */}
+      <div className="w-full max-w-[1560px] mx-auto grid grid-cols-2 md:grid-cols-2 gap-8">
+        {/* col -1*/}
         <div className="space-y-4">
           <h2 className="font-fair text-4xl font-bold text-zinc-100 tracking-tight">Wada Index</h2>
           <p className="text-sm leading-relaxed max-w-xs">
@@ -30,9 +30,9 @@ export default function Footer() {
           </p>
         </div>
 
-        {/* Column 2: Credits & Interaction */}
-        <div className="flex justify-end gap-30">
-          {/* Column 1: Quick Links */}
+        {/* col -2 */}
+        <div className="flex justify-end gap-20">
+          {/* links */}
           <div className="flex flex-col space-y-3">
             <h3 className="text-zinc-300/90 text-xl uppercase tracking-[0.1em] font-fair mb-2 font-semibold">
               Navigation
@@ -47,7 +47,7 @@ export default function Footer() {
               Common Questions
             </Link>
             <a
-              href="https://github.com/your-username/wada-index"
+              href="https://github.com/byllzz/wada-index"
               target="_blank"
               rel="noreferrer"
               className="hover:text-white transition-colors text-sm"
@@ -55,10 +55,10 @@ export default function Footer() {
               GitHub Repo
             </a>
           </div>
-          {/* column 2 */}
+          {/* main source */}
           <div className="flex flex-col items-start md:items-end justify-between">
             <div className="text-left md:text-right">
-              <h3 className="text-zinc-300/90 font-fair text-lg uppercase tracking-[0.1em] mb-2 font-semibold">
+              <h3 className="text-zinc-300/90 text-xl uppercase  font-fair mb-2 font-semibold">
                 Source Material
               </h3>
               <p className="text-sm italic font-fair">Haishoku Sōkan (1933)</p>
@@ -68,16 +68,23 @@ export default function Footer() {
               onClick={scrollToTop}
               className="mt-8 md:mt-0 group flex items-center gap-2 text-xs uppercase tracking-widest text-zinc-300  hover:text-zinc-400 transition-color"
             >
-             Back To Top
+              Back To Top
             </button>
           </div>
         </div>
       </div>
 
-      {/* Bottom Copyright Bar */}
-      <div className="max-w-[1550px] w-full mx-auto mt-16 pt-8 border-t border-zinc-900 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] uppercase tracking-widest">
-        <p>© 2026 Developed by (Bilal Malik)</p>
-        <p>Inspired by the legacy of Wada Sanzō</p>
+      {/* copyright & license */}
+      <div className="w-full py-8 border-t border-zinc-900 flex  md:flex-row justify-center items-center  uppercase tracking-widest">
+        <div className="flex flex-col items-center justify-center">
+          <p className='uppercase font-fair text-zinc-300/90 text-sm'>© 2025 Colors of Wada Index</p>
+          <Link
+            to="/license"
+            className="font-fair capitalize text-[18px] underline md:text-[18px] mb-4 tracking-tight"
+          >
+            License & Rights
+          </Link>
+        </div>
       </div>
     </footer>
   );
