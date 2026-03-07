@@ -1,1 +1,36 @@
-@import "tailwindcss"
+@import "tailwindcss";
+
+@theme {
+  --font-fair: "Playfair Display", serif;
+}
+
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    @apply bg-black text-neutral-200 antialiased;
+    font-family: system-ui, sans-serif;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  button {
+    cursor: pointer;
+    border: none;
+    background: none;
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+  }
+}
