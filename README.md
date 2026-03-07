@@ -93,8 +93,6 @@ Built for archival precision, monumental typography, and minimalist immersion â€
 Requirements
 Node.js (v18+)
 
-Browser (Chrome / Safari / Firefox)
-
 Clone the Repository
 Bash
 
@@ -111,7 +109,7 @@ npm run dev
 ~~~
 
 ## License ðŸ“„
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the MIT License - see the [LICENSE.md](./LICENSE) file for details.
 
 ---
 
