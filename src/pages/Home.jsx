@@ -35,18 +35,18 @@ export default function Home() {
         <FIlterPanel setsearchQuery={setsearchQuery} />
 
         <div className="flex flex-row items-center justify-center w-full max-w-400 mx-auto gap-20 my-32">
-          <button
-            className={`text-7xl italic font-serif transition-all duration-500 ${activeView === 'colors' ? 'text-white' : 'text-zinc-800'}`}
+       (   <button
+            className={`text-3xl italic font-serif transition-all duration-500 ${activeView === 'colors' ? 'text-white' : 'text-zinc-800'}`}
             onClick={() => setActiveView('colors')}
           >
             Individual Colors
           </button>
           <button
             onClick={() => setActiveView('plates')}
-            className={`text-7xl italic font-serif transition-all duration-500 ${activeView === 'plates' ? 'text-white' : 'text-zinc-800'}`}
+            className={`text-3xl italic font-serif transition-all duration-500 ${activeView === 'plates' ? 'text-white' : 'text-zinc-800'}`}
           >
             Color Plates
-          </button>
+          </button> )
         </div>
 
         {/* View Logic */}
@@ -63,7 +63,7 @@ export default function Home() {
           </div>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 min-h-[40vh]">
-          
+
             {filteredPlates.length > 0 ? (
               filteredPlates.map((plate, index) => <PlateCard key={index} plate={plate} />)
             ) : (
