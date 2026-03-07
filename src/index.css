@@ -33,4 +33,24 @@
     display: block;
     max-width: 100%;
   }
+    ::-webkit-scrollbar {
+      width: 5px;
+      height: 5px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #050505;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #1a1a1a;
+      border-radius: 100px;
+      transition: background 0.3s ease;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #3f3f46;
+    }
+    * {
+      scrollbar-width: thin;
+      scrollbar-color: #1a1a1a #050505;
+    }
 }

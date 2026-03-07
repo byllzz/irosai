@@ -8,7 +8,7 @@ export default function ColorDetails() {
   const navigate = useNavigate();
   const item = location.state?.color;
 
-  // Helper function to convert Hex to RGB for the UI
+  // Hex to RGB for the UI
   const hexToRgb = (hex) => {
     const r = parseInt(hex.slice(1, 3), 16);
     const g = parseInt(hex.slice(3, 5), 16);
@@ -20,7 +20,7 @@ export default function ColorDetails() {
 
   return (
     <div className="min-h-screen bg-black text-zinc-100 selection:bg-white selection:text-black">
-      {/* 1. Hero Section (Dynamic Background) */}
+      {/* Hero Section */}
       <div
         className="w-full h-[60vh] relative flex flex-col justify-between p-8 md:p-16 transition-colors duration-1000 mt-20"
         style={{ backgroundColor: item.hex }}
@@ -46,7 +46,7 @@ export default function ColorDetails() {
         </div>
       </div>
 
-      {/* 2. Technical Data Section */}
+      {/* Technical Data Section */}
       <div className="px-6  md:px-16 py-24 grid  grid-cols-1 md:grid-cols-3 gap-12 border-b border-zinc-900">
         <div className="space-y-2">
           <p className="font-mono text-[10px] text-zinc-600 uppercase tracking-widest">Hex Code</p>
@@ -66,7 +66,7 @@ export default function ColorDetails() {
         </div>
       </div>
 
-      {/* 3. Description & Narrative */}
+      {/*  Description & Narrative */}
       <div className="px-8 md:px-16 py-24 max-w-4xl">
         <h2 className="font-mono text-[10px] text-zinc-600 uppercase tracking-[0.5em] mb-10">
           Historical Context

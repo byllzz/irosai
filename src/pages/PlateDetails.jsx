@@ -13,7 +13,7 @@ export default function PlateDetails() {
   return (
     <div className="min-h-screen bg-black text-zinc-100 selection:bg-white selection:text-black mt-20">
 
-      {/* 1. Header Navigation */}
+      {/* Header Navigation */}
       <div className="fixed top-20 w-full z-50 p-8 flex justify-between items-center mix-blend-difference">
         <button
           onClick={() => navigate(-1)}
@@ -25,7 +25,7 @@ export default function PlateDetails() {
         <span className="text-white font-serif italic text-xl">Plate No. {plate.id}</span>
       </div>
 
-      {/* 2. Hero: The Color Harmony Display */}
+      {/*  hero */}
       <div className="flex h-[70vh] w-full pt-24 px-4 gap-1">
         {plate.colors.map((hex, index) => (
           <div
@@ -43,7 +43,7 @@ export default function PlateDetails() {
         ))}
       </div>
 
-      {/* 3. Narrative & Plate Data */}
+      {/*  Narrative & Plate Data */}
       <div className="px-8 md:px-20 py-24 flex flex-col md:flex-row justify-between gap-20">
         <div className="max-w-2xl">
           <p className="font-mono text-[10px] text-zinc-600 uppercase tracking-[0.5em] mb-6">Plate Composition</p>
@@ -80,7 +80,7 @@ export default function PlateDetails() {
         </div>
       </div>
 
-      {/* 4. Decorative Separator */}
+      {/* Decorative Separator */}
       <div className="px-20 pb-32">
         <div className="h-[1px] w-full bg-zinc-900"></div>
       </div>

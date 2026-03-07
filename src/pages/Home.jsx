@@ -11,10 +11,10 @@ export default function Home() {
   const platesColorsData = plateData.plates;
   const singalColorData = colorData.colors;
 
-  const [activeView, setActiveView] = useState("colors");
-  const [searchQuery, setsearchQuery] = useState("");
+  const [activeView, setActiveView] = useState('colors');
+  const [searchQuery, setsearchQuery] = useState('');
 
-  // Logic: These arrays update automatically whenever searchQuery changes
+  // main logic for searchQuery
   const filteredColors = singalColorData.filter(
     color =>
       color.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -52,11 +52,9 @@ export default function Home() {
         {/* View Logic */}
         {activeView === 'colors' ? (
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 min-h-[40vh]">
-            {/* IMPORTANT: Map over filteredColors, not singalColorData */}
+
             {filteredColors.length > 0 ? (
-              filteredColors.map(item => (
-                <SingleColorCard key={item.id} item={item} />
-              ))
+              filteredColors.map(item => <SingleColorCard key={item.id} item={item} />)
             ) : (
               <div className="col-span-full py-20 text-center text-zinc-700 font-serif italic text-2xl">
                 No pigments found matching "{searchQuery}"
@@ -65,11 +63,9 @@ export default function Home() {
           </div>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 min-h-[40vh]">
-            {/* IMPORTANT: Map over filteredPlates, not platesColorsData */}
+          
             {filteredPlates.length > 0 ? (
-              filteredPlates.map((plate, index) => (
-                <PlateCard key={index} plate={plate} />
-              ))
+              filteredPlates.map((plate, index) => <PlateCard key={index} plate={plate} />)
             ) : (
               <div className="col-span-full py-20 text-center text-zinc-700 font-serif italic text-2xl">
                 No plates found matching "{searchQuery}"

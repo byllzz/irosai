@@ -29,7 +29,7 @@ export default function App() {
   }, []);
   return (
     <BrowserRouter>
-      <div className="position">
+      <div>
         <div className={navStyle}>
           <Navbar />
         </div>
