@@ -54,7 +54,7 @@ export default function License() {
                 The color combinations and theories presented in this index are based on the
                 historical work <strong>"Haishoku Sōkan"</strong> (1933) by Wada Sanzō. While the
                 original research is in the public domain in many jurisdictions, this digital
-                interpretation and curated dataset remain the property of the Wada Index archive.
+                interpretation and curated dataset remain the property of the Iro Kumi archive.
               </p>
             </div>
 
@@ -87,7 +87,7 @@ export default function License() {
               {/* stamp */}
               <div className="w-24 h-24 border-2 border-zinc-800 rounded-full flex items-center justify-center rotate-12 opacity-50">
                 <span className="text-[10px] text-center uppercase tracking-tighter font-bold text-zinc-500">
-                  Wada Index
+                  Iro Kumi
                   <br />
                   Official
                   <br />
