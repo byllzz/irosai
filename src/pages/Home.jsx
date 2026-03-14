@@ -3,7 +3,7 @@ import Faqs from '../components/layout/Faqs';
 import plateData from '../data/wadaData.json';
 import colorData from '../data/colors-data.json';
 import PlateCard from '../components/ui/PlateCard';
-import FilterPanel from '../components/ui/FIlterPanel';
+import FIlterPanel from '../components/ui/FIlterPanel';
 import SingleColorCard from '../components/ui/SingleColorCard';
 import { useState } from 'react';
 
@@ -35,7 +35,7 @@ export default function Home() {
 
       {/*  Filter Section */}
       <div className="relative z-20 ">
-        <FilterPanel setsearchQuery={setSearchQuery} />
+        <FIlterPanel setsearchQuery={setSearchQuery} />
       </div>
 
       <main className="max-w-[1600px] mx-auto px-6 md:px-12 py-44">
