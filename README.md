@@ -13,7 +13,7 @@ Built for archival precision, monumental typography, and minimalist immersion �
 <img src="https://img.shields.io/badge/Author-Bilal%20Malik-9B72FF.svg?style=flat" />
 </a>
 <a href="https://github.com/byllzz/iro-kumi/releases">
-<img src="https://img.shields.io/badge/Latest%20Release-7%20Mar%202026-9B72FF.svg?style=flat" />
+<img src="https://img.shields.io/badge/Latest%20Release-6%20April%202026-9B72FF.svg?style=flat" />
 </a>
 </p>
 <br />
@@ -92,7 +92,13 @@ npm install
 npm run dev
 ~~~
 
-## License
-This project is licensed under the MIT License - see the [LICENSE.md](./LICENSE) file for details. <br>
-This project is inspired from **Wada Sanzo" Book!
+# License 📄
+
+This project is licensed under the MIT License - see the [LICENSE.md](./LICENSE) file for details.
+
+# Feedback / Suggestions
+
+Reach out at bilalmlkdev@gmail.com. If you like this project, please ⭐ star the repo - it motivates future updates!
+
+- *Note: This project is inspired from **Wada Sanzo" Book!**!*
 
