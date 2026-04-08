@@ -1,11 +1,11 @@
-
+import React, { useState } from 'react';
 import Faqs from '../components/layout/Faqs';
 import plateData from '../data/plates-data.json';
 import colorData from '../data/colors-data.json';
 import SearchNavigation from '../components/layout/SearchNavigation';
 import ContentGrid from '../components/ui/ContentGrid';
 import Hero from '../components/layout/Hero';
-import { useState } from 'react';
+import Preloader from '../components/layout/Preloader';
 
 export default function Home() {
   const platesColorsData = plateData.plates;
@@ -13,7 +13,9 @@ export default function Home() {
 
   const [activeView, setActiveView] = useState('colors');
   const [searchQuery, setSearchQuery] = useState('');
+  const [isLoading, setIsLoading] = useState(true);
 
+  // Logic for filtering
   const filteredColors = singalColorData.filter(
     color =>
       color.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -25,42 +27,55 @@ export default function Home() {
   );
 
   return (
-    <div className="w-full min-h-screen background-color text-white font-serif overflow-x-hidden">
-      <Hero />
-      <main className="max-w-[1600px] mx-auto px-6 md:px-12 py-44">
-        {/* search area */}
-        <SearchNavigation
-          searchQuery={searchQuery}
-          setSearchQuery={setSearchQuery}
-          activeView={activeView}
-          setActiveView={setActiveView}
-        />
-        {/* Grid */}
-        <ContentGrid
-          activeView={activeView}
-          filteredColors={filteredColors}
-          filteredPlates={filteredPlates}
-          searchQuery={searchQuery}
-        />
-      </main>
-      <Faqs />
-    </div>
+    <>
+      {/* preloader */}
+      {isLoading && <Preloader onComplete={() => setIsLoading(false)} />}
+
+      {/*main site content */}
+      <div
+        className={`w-full min-h-screen background-color text-white font-serif overflow-x-hidden transition-opacity duration-1000 ${
+          isLoading ? 'opacity-0' : 'opacity-100'
+        }`}
+      >
+        <Hero />
+
+        <main className="max-w-[1600px] mx-auto px-6 md:px-12 py-32 md:py-44">
+          {/* Search Area */}
+          <SearchNavigation
+            searchQuery={searchQuery}
+            setSearchQuery={setSearchQuery}
+            activeView={activeView}
+            setActiveView={setActiveView}
+          />
+
+          {/* Results Grid */}
+          <ContentGrid
+            activeView={activeView}
+            filteredColors={filteredColors}
+            filteredPlates={filteredPlates}
+            searchQuery={searchQuery}
+          />
+        </main>
+
+        <Faqs />
+      </div>
+    </>
   );
 }
 
-/*  Empty Results */
+/* Empty Results Component */
 export function EmptyState({ query }) {
   return (
     <div className="col-span-full py-32 flex flex-col items-center">
-      <span className="text-6xl mb-4 opacity-20">:(</span>
+      <span className="text-6xl mb-4 opacity-20 font-sans">:(</span>
       <p className="text-zinc-500 font-serif italic text-xl md:text-2xl text-center">
-        No results for <span className="text-[#1A1A1A]">"{query}"</span>
+        No results in the registry for <span className="text-white not-italic">"{query}"</span>
       </p>
       <button
         onClick={() => window.location.reload()}
-        className="mt-6 text-[10px] uppercase tracking-widest border-b border-[#1A1A1A] pb-1 hover:opacity-50 transition-opacity"
+        className="mt-6 text-[10px] uppercase tracking-widest border-b border-zinc-700 pb-1 hover:text-[#E2FF46] hover:border-[#E2FF46] transition-all"
       >
-        Clear all filters
+        Reset Archive Filters
       </button>
     </div>
   );
