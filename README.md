@@ -87,7 +87,7 @@ This project is licensed under the MIT License - see the [LICENSE.md](./LICENSE)
 
 # Feedback 
 
-Reach out at bilalmlkdev@gmail.com. If you like this project, please ⭐ star the repo - it motivates future updates!
+Reach out at **bilalmlkdev@gmail.com**. If you like this project, please ⭐ star the repo - it motivates future updates!
 
 - *Note: This project is inspired from **Wada Sanzo" Book!**!*
 
